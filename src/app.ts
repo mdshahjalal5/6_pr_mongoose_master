@@ -10,7 +10,7 @@ const app:Application = express();
 app.use(cors())
 // !json 
 app.use(express.json())
-// ! route the 
+// ! route 
 app.use('/chk', userRoute)
 app.get("/", (req:Request, res:Response) => {
   res.send({
