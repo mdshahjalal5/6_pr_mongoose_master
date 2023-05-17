@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import app from "../app";
+import app from "../src/app";
 const mongoDBUrl = `mongodb+srv://web2:8HdqwXJGb4ZKIcJ1@chkdbcluster.qsaqded.mongodb.net/?retryWrites=true&w=majority`;
 console.log('ami shahjalal');
 
