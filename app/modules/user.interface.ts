@@ -1,4 +1,4 @@
-import { Model } from "mongoose";
+import { HydratedDocument, Model } from "mongoose";
 
 export interface Iuser {
     name:string, 
@@ -19,7 +19,8 @@ export interface Iuser {
 export interface IMethods {
     u_identity():string, 
 }
-
-export interface UserModel extends Model<>{
-
+// !un 
+export interface UserModel extends Model<Iuser,{}, IMethods>{
+    // !un  
+        get_admin_users():Promise<HydratedDocument<Iuser, IMethods>>
 }

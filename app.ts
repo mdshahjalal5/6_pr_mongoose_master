@@ -1,8 +1,9 @@
-import { Request, Response } from "express";
+import { Application, Request, Response } from "express";
 import express from "express";
-
-const app = express();
-
+import userRoute from './app/modules/user.route'
+const app:Application = express();
+app.use(express.json())
+app.use('/chk', userRoute)
 app.get("/", (req:Request, res:Response) => {
   res.send({
     name: "shah",
@@ -10,4 +11,4 @@ app.get("/", (req:Request, res:Response) => {
   });
 });
 
-export default app;
+export default app
