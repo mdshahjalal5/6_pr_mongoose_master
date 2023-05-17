@@ -6,8 +6,11 @@ import userRoute from './app/modules/user/user.route'
 import cors from "cors";
 
 const app:Application = express();
-app.use()
+// ! cors
+app.use(cors())
+// !json 
 app.use(express.json())
+// ! route 
 app.use('/chk', userRoute)
 app.get("/", (req:Request, res:Response) => {
   res.send({
